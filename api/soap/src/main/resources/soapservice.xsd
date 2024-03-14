@@ -4,8 +4,8 @@
            targetNamespace="https://markusnewtonh.com/api-bench"
            elementFormDefault="qualified">
 
-    <!--  Small request  -->
-    <xs:element name="getSmallRequest">
+    <!--  Echo request  -->
+    <xs:element name="getEchoRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="data" type="xs:string"/>
@@ -13,7 +13,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="getSmallResponse">
+    <xs:element name="getEchoResponse">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="data" type="xs:string"/>
@@ -21,8 +21,8 @@
         </xs:complexType>
     </xs:element>
 
-    <!--  Typical request  -->
-    <xs:element name="getTypicalRequest">
+    <!--  Modify request  -->
+    <xs:element name="getModifyRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="data" type="xs:string"/>
@@ -30,41 +30,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="getTypicalResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="data" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <!--  Large request  -->
-    <xs:element name="getLargeRequest">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="data" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="getLargeResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="data" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <!--  Stress request  -->
-    <xs:element name="getStressRequest">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="data" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="getStressResponse">
+    <xs:element name="getModifyResponse">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="data" type="xs:string"/>
