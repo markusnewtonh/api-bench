@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="https://markusnewtonh.com/api-bench"
+           targetNamespace="https://markusnewtonh.com/api-bench"
+           elementFormDefault="qualified">
+
+    <!--  Small request  -->
+    <xs:element name="getSmallRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getSmallResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--  Typical request  -->
+    <xs:element name="getTypicalRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getTypicalResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--  Large request  -->
+    <xs:element name="getLargeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getLargeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--  Stress request  -->
+    <xs:element name="getStressRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getStressResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
