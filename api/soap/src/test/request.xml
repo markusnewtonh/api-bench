@@ -1,15 +1,17 @@
 <!--
 test service with:
-"curl &#45;&#45;header "content-type: text/xml" -d @request.xml http://localhost:8080/ws"
+"curl -<removethis>-header "content-type: text/xml" -d @request.xml http://localhost:8080/ws"
 -->
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:gs="https://markusnewtonh.com/api-bench">
     <soapenv:Header/>
     <soapenv:Body>
         <gs:getEchoRequest>
-            <gs:data>
-                TEST DATA
-            </gs:data>
+            <gs:product>
+                <gs:id>0</gs:id>
+                <gs:name>Table</gs:name>
+                <gs:description>Ordinary table.</gs:description>
+            </gs:product>
         </gs:getEchoRequest>
     </soapenv:Body>
 </soapenv:Envelope>
