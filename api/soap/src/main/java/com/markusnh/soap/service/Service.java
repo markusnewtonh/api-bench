@@ -17,7 +17,8 @@ public class Service {
         modifyDescription(request.description()));
   }
 
-  private String modifyDescription(String requestDescription) {
+  private String modifyDescription(final String requestDescription) {
     return new StringBuilder(requestDescription).reverse().toString();
   }
 }
+

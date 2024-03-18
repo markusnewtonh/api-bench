@@ -52,8 +52,8 @@ public class SoapEndpoint {
     return response;
   }
 
-  private https.markusnewtonh_com.api_bench.Product convertToSoapProduct(Product product) {
-    https.markusnewtonh_com.api_bench.Product soapProduct =
+  private https.markusnewtonh_com.api_bench.Product convertToSoapProduct(final Product product) {
+    final https.markusnewtonh_com.api_bench.Product soapProduct =
         new https.markusnewtonh_com.api_bench.Product();
     soapProduct.setId(product.id());
     soapProduct.setName(product.name());

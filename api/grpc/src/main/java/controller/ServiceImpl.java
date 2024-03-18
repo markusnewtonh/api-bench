@@ -11,7 +11,7 @@ public class ServiceImpl extends ServiceGrpc.ServiceImplBase {
   private static final Service service = new Service();
 
   @Override
-  public void echo(ServiceOuterClass.ProductRequest request, StreamObserver<ServiceOuterClass.ProductResponse> responseObserver) {
+  public void echo(final ServiceOuterClass.ProductRequest request, final StreamObserver<ServiceOuterClass.ProductResponse> responseObserver) {
     final ProductRequest productRequest =
         new ProductRequest(
             request.getProduct().getId(),
@@ -27,7 +27,7 @@ public class ServiceImpl extends ServiceGrpc.ServiceImplBase {
   }
 
   @Override
-  public void modify(ServiceOuterClass.ProductRequest request, StreamObserver<ServiceOuterClass.ProductResponse> responseObserver) {
+  public void modify(final ServiceOuterClass.ProductRequest request, final StreamObserver<ServiceOuterClass.ProductResponse> responseObserver) {
     final ProductRequest productRequest =
         new ProductRequest(
             request.getProduct().getId(),
@@ -42,7 +42,7 @@ public class ServiceImpl extends ServiceGrpc.ServiceImplBase {
     responseObserver.onCompleted();
   }
 
-  private ServiceOuterClass.Product convertToGrpcProduct(Product product) {
+  private ServiceOuterClass.Product convertToGrpcProduct(final Product product) {
     return ServiceOuterClass.Product.newBuilder()
         .setId(product.id())
         .setName(product.name())
