@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service Service {
+  rpc Echo (ProductRequest) returns (ProductResponse) {}
+  rpc Modify (ProductRequest) returns (ProductResponse) {}
+}
+
+message ProductRequest {
+  Product product = 1;
+}
+
+message ProductResponse {
+  Product product = 1;
+}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+}

@@ -36,7 +36,7 @@ public class SoapEndpoint {
     return response;
   }
 
-  @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getTypicalRequest")
+  @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getModifyRequest")
   @ResponsePayload
   public GetModifyResponse getModify(@RequestPayload GetModifyRequest request) {
     final ProductRequest productRequest =

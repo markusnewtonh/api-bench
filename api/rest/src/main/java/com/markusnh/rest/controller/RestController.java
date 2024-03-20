@@ -15,6 +15,7 @@ public class RestController {
 
   @PostMapping("/echo")
   public Product echo(@RequestBody ProductRequest productRequest) {
+//    System.err.println("request received");
     return service.echo(productRequest);
   }
 

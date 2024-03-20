@@ -8,7 +8,7 @@ public class SimpleTest {
    * Start GrpcApplication before running test below
    */
   public static void main(String[] args){
-    final ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8089).usePlaintext().build();
+    final ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8080).usePlaintext().build();
 
     final ServiceGrpc.ServiceBlockingStub testStub = ServiceGrpc.newBlockingStub(channel);
 
