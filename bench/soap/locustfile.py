@@ -1,8 +1,8 @@
-from locust import HttpUser, task
+from locust import FastHttpUser, task
 from zeep import Client
 
 
-class SoapUser(HttpUser):
+class SoapUser(FastHttpUser):
 
     def __init__(self, *args, **kwargs):
         super(SoapUser, self).__init__(*args, **kwargs)

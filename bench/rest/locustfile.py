@@ -1,6 +1,6 @@
-from locust import HttpUser, task
+from locust import FastHttpUser, task
 
-class RestUser(HttpUser):
+class RestUser(FastHttpUser):
     
     @task
     def echo_small(self):
