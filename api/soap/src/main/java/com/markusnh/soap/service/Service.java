@@ -11,14 +11,10 @@ public class Service {
   }
 
   public Product modify(final ProductRequest request) {
-    return new Product(
-        request.id(),
-        request.name(),
-        modifyDescription(request.description()));
+    return new Product(request.id(), request.name(), modifyDescription(request.description()));
   }
 
   private String modifyDescription(final String requestDescription) {
     return new StringBuilder(requestDescription).reverse().toString();
   }
 }
-
