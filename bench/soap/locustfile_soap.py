@@ -14,6 +14,7 @@ class SoapUser(HttpUser):
         self.client = Client(wsdl=wsdl, transport=client_session)
         self.client.set_ns_prefix("tns", "https://markusnewtonh.com/api-bench")
         self.product_type = self.client.get_type("tns:product")
+        
 
     @tag("small")
     @task
@@ -29,6 +30,7 @@ class SoapUser(HttpUser):
         # uncomment to print response
         # response = self.client.service.getEcho(product=product_data)
         # print(response)
+        
 
     @tag("typical")
     @task
@@ -39,7 +41,10 @@ class SoapUser(HttpUser):
             description=ProductData.get_typical_product_description()
         )
 
-        self.client.service.getModify(product=product_data)
+        # self.client.service.getModify(product=product_data)
+        response = self.client.service.getModify(product=product_data)
+        print(response)
+        
 
     @tag("large")
     @task
