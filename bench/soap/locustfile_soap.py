@@ -41,13 +41,13 @@ class SoapUser(HttpUser):
 
         self.client.service.getModify(product=product_data)
 
-    @tag("max")
+    @tag("large")
     @task
-    def max(self):
+    def large(self):
         product_data = self.product_type(
             id=2,
-            name=ProductData.get_max_product_name(),
-            description=ProductData.get_max_product_description()
+            name=ProductData.get_large_product_name(),
+            description=ProductData.get_large_product_description()
         )
 
         self.client.service.getEcho(product=product_data)
@@ -57,8 +57,8 @@ class SoapUser(HttpUser):
     def stress(self):
         product_data = self.product_type(
             id=3,
-            name=ProductData.get_max_product_name(),
-            description=ProductData.get_max_product_description()
+            name=ProductData.get_large_product_name(),
+            description=ProductData.get_large_product_description()
         )
 
         self.client.service.getModify(product=product_data)

@@ -30,13 +30,13 @@ class RestUser(HttpUser):
 
         self.client.post(url="/modify", json=request)
 
-    @tag("max")
+    @tag("large")
     @task
-    def max(self):
+    def large(self):
         request = {
             "id": 2,
-            "name": ProductData.get_max_product_name(),
-            "description": ProductData.get_max_product_description()
+            "name": ProductData.get_large_product_name(),
+            "description": ProductData.get_large_product_description()
         }
 
         self.client.post(url="/echo", json=request)
@@ -46,8 +46,8 @@ class RestUser(HttpUser):
     def stress(self):
         request = {
             "id": 3,
-            "name": ProductData.get_max_product_name(),
-            "description": ProductData.get_max_product_description()
+            "name": ProductData.get_large_product_name(),
+            "description": ProductData.get_large_product_description()
         }
 
         self.client.post(url="/modify", json=request)

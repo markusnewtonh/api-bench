@@ -24,14 +24,14 @@ class ProductData:
                 Nu med ca 30% mindre socker."
     
     
-    # Max message product info
+    # LArge message product info
     @staticmethod
-    def get_max_product_name():
-        return "Max product"
+    def get_large_product_name():
+        return "Large product"
     
     @staticmethod
-    def get_max_product_description():
+    def get_large_product_description():
         # approx. x MB in size
-        x = 1_000_000
-        return "a" * x
+        x = 1
+        return "a" * x * 1_000_000
     

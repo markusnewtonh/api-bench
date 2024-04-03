@@ -38,12 +38,12 @@ class GrpcUser(grpc_user.GrpcUser):
         # Send request
         self.stub.Modify(request=request)
 
-    @tag("max")
+    @tag("large")
     @task
-    def max(self):
+    def large(self):
         product_info = service_pb2.Product(id=2,
-                                           name=ProductData.get_max_product_name(),
-                                           description=ProductData.get_max_product_description())
+                                           name=ProductData.get_large_product_name(),
+                                           description=ProductData.get_large_product_description())
         request = service_pb2.ProductRequest(product=product_info)
 
         # Send request
@@ -53,8 +53,8 @@ class GrpcUser(grpc_user.GrpcUser):
     @task
     def stress(self):
         product_info = service_pb2.Product(id=3,
-                                           name=ProductData.get_max_product_name(),
-                                           description=ProductData.get_max_product_description())
+                                           name=ProductData.get_large_product_name(),
+                                           description=ProductData.get_large_product_description())
         request = service_pb2.ProductRequest(product=product_info)
 
         # Send request
