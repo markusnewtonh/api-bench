@@ -6,12 +6,12 @@ test service with:
                   xmlns:gs="https://markusnewtonh.com/api-bench">
     <soapenv:Header/>
     <soapenv:Body>
-        <gs:getEchoRequest>
+        <gs:getModifyRequest>
             <gs:product>
                 <gs:id>0</gs:id>
                 <gs:name>Table</gs:name>
                 <gs:description>Ordinary table.</gs:description>
             </gs:product>
-        </gs:getEchoRequest>
+        </gs:getModifyRequest>
     </soapenv:Body>
 </soapenv:Envelope>

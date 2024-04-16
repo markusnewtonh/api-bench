@@ -32,6 +32,6 @@ class ProductData:
     @staticmethod
     def get_large_product_description():
         # approx. x MB in size
-        x = 1
+        x = 2
         return "a" * x * 1_000_000
     
