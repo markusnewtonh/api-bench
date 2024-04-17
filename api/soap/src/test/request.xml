@@ -1,6 +1,6 @@
 <!--
-test service with:
-"curl -<removethis>-header "content-type: text/xml" -d @request.xml http://localhost:8080/ws"
+test service with CLI
+"curl -H "content-type: text/xml" -d @request.xml http://localhost:8080/ws"
 -->
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:gs="https://markusnewtonh.com/api-bench">
