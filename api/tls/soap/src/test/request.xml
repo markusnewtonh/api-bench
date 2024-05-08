@@ -1,0 +1,17 @@
+<!--
+test service with CLI
+"curl -H "content-type: text/xml" -d @request.xml http://localhost:8080/ws"
+-->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:gs="https://markusnewtonh.com/api-bench">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <gs:getModifyRequest>
+            <gs:product>
+                <gs:id>0</gs:id>
+                <gs:name>Table</gs:name>
+                <gs:description>Ordinary table.</gs:description>
+            </gs:product>
+        </gs:getModifyRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
