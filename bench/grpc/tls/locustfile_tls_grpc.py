@@ -18,14 +18,14 @@ class GrpcTlsUser(grpc_tls_user.GrpcTlsUser):
         request = service_pb2.ProductRequest(product=product_info)
 
         # Send request
-        # self.stub.Echo(request=request)
+        self.stub.Echo(request=request)
 
         # -- Print response (simple test)
-        response = self.stub.Echo(request=request)
-        print("id: " + str(response.product.id))
-        print("name: " + response.product.name)
-        print("description: " + response.product.description)
-        print()
+        # response = self.stub.Echo(request=request)
+        # print("id: " + str(response.product.id))
+        # print("name: " + response.product.name)
+        # print("description: " + response.product.description)
+        # print()
         
     @tag("typical")
     @task
