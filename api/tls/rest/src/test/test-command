@@ -1,5 +1,7 @@
+Navigate to src/main/resources/certs.
+
 Test with:
 
-curl -X POST localhost:8080/echo -H 'Content-type:application/json' -d '{"id": 0, "name": "Table", "description": "Ordinary table."}'
+curl --cacert ca-cert.pem -X POST https://localhost:8080/echo -H 'Content-type:application/json' -d '{"id": 0, "name": "Table", "description": "Ordinary table."}'
 
-curl -X POST localhost:8080/modify -H 'Content-type:application/json' -d '{"id": 0, "name": "Table", "description": "Ordinary table."}'
+curl --cacert ca-cert.pem -X POST https://localhost:8080/modify -H 'Content-type:application/json' -d '{"id": 0, "name": "Table", "description": "Ordinary table."}'
