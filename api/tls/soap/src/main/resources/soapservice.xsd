@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="https://markusnewtonh.com/api-bench"
+           targetNamespace="https://markusnewtonh.com/api-bench"
+           elementFormDefault="qualified">
+
+    <!--  Echo request  -->
+    <xs:element name="getEchoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getEchoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--  Modify request  -->
+    <xs:element name="getModifyRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getModifyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product" type="tns:product"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="product">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
